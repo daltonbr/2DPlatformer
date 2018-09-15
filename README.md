@@ -1,4 +1,5 @@
 # 2DPlatformer
+
 Based on a [Live Session: 2D Platformer Character Controller](https://unity3d.com/learn/tutorials/topics/2d-game-creation/intro-and-session-goals)
 
 by Matthew Schell - Unity Evangelist
@@ -18,4 +19,4 @@ http://bit.ly/unity2dController
 
 ## Disclaimer
 
-THis course was originally checked for Unity 5.6, but I am using a more recent version 2018.3.0b1 (beta). So I am making the necessary adjustments.
+This course was originally checked for Unity 5.6, but I am using a more recent version 2018.3.0b1 (beta). So I am making the necessary adjustments.
