@@ -11,6 +11,7 @@ public class PhysicsObject : MonoBehaviour
 {
     public float minGroundNormalY = 0.65f;
     public float gravityModifier = 1f;
+    protected Vector2 targetVelocity;
     protected bool grounded;
     protected Vector2 groundNormal;
     protected Rigidbody2D rb2d;
@@ -38,9 +39,13 @@ public class PhysicsObject : MonoBehaviour
     void FixedUpdate()
     {
         velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
+        velocity.x = targetVelocity.x;
         grounded = false;
         Vector2 deltaPosition = velocity * Time.deltaTime;
-        Vector2 move = Vector2.up * deltaPosition.y;
+        Vector2 moveAlongGround = new Vector2 (groundNormal.y, - groundNormal.x);
+        Vector2 move = moveAlongGround * deltaPosition.x;
+        Movement(move, false);
+        move = Vector2.up * deltaPosition.y;
         Movement(move, true);
     }
 
